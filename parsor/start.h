@@ -2,13 +2,21 @@
 //  start.h
 //  parsor
 //
-//  Created by hambarkh on 03/03/15.
+//  Created by hambarkh on 08/03/15.
 //  Copyright (c) 2015 Akola. All rights reserved.
 //
 
-#ifndef __parsor__start__
-#define __parsor__start__
+#ifndef parsor_start_h
+#define parsor_start_h
 
-#include <stdio.h>
 
-#endif /* defined(__parsor__start__) */
+#endif
+
+
+
+#define MAX_TOKEN_NO 50
+using namespace std;
+
+char xml[] = "<person><name=\"shahaji\"/><age=\"56\"/><person><name=\"shivaji\"/><age=\"28\"/></person><person><name=\"sambhaji\"/><age=\"20\"/></person></person>";
+
+string token[MAX_TOKEN_NO];
