@@ -24,5 +24,6 @@ int main(int argc, const char * argv[]) {
     traverse(xml); //tokenize
     printMap();
     stackify();
+    cout << "calling destructors" << endl << endl;
     return 0;
 }

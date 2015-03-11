@@ -17,6 +17,6 @@
 #define MAX_TOKEN_NO 50
 using namespace std;
 
-char xml[] = "<person><name=\"shahaji\"/><age=\"56\"/><person><name=\"shivaji\"/><age=\"28\"/></person><person><name=\"sambhaji\"/><age=\"20\"/></person></person>";
+char xml[] = "<person><name=\"shahaji\"/><age=\"56\"/><person><name=\"shivaji\"/><age=\"28\"/><person><name=\"sambhaji\"/><age=\"20\"/></person></person></person>";
 
 string token[MAX_TOKEN_NO];

@@ -26,22 +26,6 @@ void getProperty(string const aInToken, string &aInVariable, string &aInValue)
     //cout << "........variable= "<< aInVariable << " Value= " << aInValue << endl;
 }
 
-string ppl[] = {"shahaji","shivaji","sambhaji"};
-
-void printMap()
-{
-    int i;
-    map<string,person>::iterator p;
-    for (i=0 ; i<3;i++)
-    {
-        p = people.find(ppl[i]);
-        if (p != people.end())
-        {
-            cout << "Name and Age = " << p->second.getName() << " and  " << p->second.getAge() << endl;
-        }
-    }
-}
-
 void updateProperty(person *aInPerson, string aInToken)
 {
     string lVariable,lValue;
@@ -108,11 +92,11 @@ void traverse(char *aInXml)
             cout << "token i3 = "<< token[token_number]<<endl;
             token_number++;
             //Push old person into map and stack
-            if (lPerson != NULL) {
+            /*if (lPerson != NULL) {
                 people.insert(pair<string, person>(lPerson->getName(),*lPerson));
                 delete lPerson;
                 lPerson = NULL;
-            }
+            }*/
             
             lXml = lXml.assign(lXml,t+i+1,lXml.size()-t-i-1);
         }
@@ -124,13 +108,13 @@ void traverse(char *aInXml)
             token_number++;
             lXml = lXml.assign(lXml,t+i+2,lXml.size()-t-i-2);
             //create person object
-            if (lPerson == NULL)
+            /*if (lPerson == NULL)
             {
                 cout << "person = NULL" << endl;
                 lPerson = new person;
-            }
+            }*/
             // Update property
-            updateProperty(lPerson,token[token_number-1]);
+            //updateProperty(lPerson,token[token_number-1]);
         }
         
         
@@ -148,6 +132,6 @@ void traverse(char *aInXml)
     }
     //All are put in MAP
     //Look into Map
-    printTokens();
+    //printTokens();
 
 }
